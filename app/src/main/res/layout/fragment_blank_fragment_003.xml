@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fra003_ConLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BlankFragment_003" >
+
+    <com.example.app_005.View.EconomicCalendarView
+        android:id="@+id/fra003_EconomicCalendarView_001"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fra003_CalendarDaySelView_001" />
+
+    <com.example.app_005.View.OpenCalendarDataView
+        android:id="@+id/fra003_OpenCalendarDataView_001"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/fra003_EconomicCalendarView_001"
+        app:layout_constraintTop_toTopOf="@+id/fra003_CalendarDaySelView_001"
+        app:layout_constraintVertical_bias="0.0"
+        tools:visibility="invisible" />
+
+    <com.example.app_005.View.CalendarDaySelView
+        android:id="@+id/fra003_CalendarDaySelView_001"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/fra003_OpenOutBut_001"
+        android:layout_width="32dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="60dp"
+        android:src="@mipmap/ic_exit_to_app_white_36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible" />
+</android.support.constraint.ConstraintLayout>

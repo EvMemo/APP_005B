@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    tools:context=".BlankFragment_002">
+
+    <com.example.app_005.View.NewsRecycleView
+        android:id="@+id/NewsRecycleView_001"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.app_005.View.RecordImpactView
+        android:id="@+id/recordImpactView_001"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@color/colorPrimary"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/textRecordView_1"
+        app:layout_constraintEnd_toEndOf="@+id/recordImpactView_001"
+        app:layout_constraintStart_toStartOf="@+id/recordImpactView_001"
+        app:layout_constraintTop_toBottomOf="@+id/recordImpactView_001" />
+
+    <com.example.app_005.View.TextRecordView
+        android:id="@+id/textRecordView_1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@drawable/edit_text_sy_001"
+        android:ems="10"
+        android:inputType="textMultiLine|textPersonName"
+        android:padding="2dp"
+        android:scrollHorizontally="false"
+        android:singleLine="false"
+        android:text="Name"
+        android:textAlignment="center"
+        android:textSize="12dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recordImpactView_001" />
+
+    <com.example.app_005.View.NewsTextView
+        android:id="@+id/fra002_newsTextView_001"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <ImageButton
+        android:id="@+id/fra002_newsTextBut_001"
+        android:layout_width="32dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="100dp"
+        android:src="@mipmap/ic_exit_to_app_white_36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+
+</android.support.constraint.ConstraintLayout>

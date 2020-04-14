@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BlankFragment_001">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Spinner
+            android:id="@+id/spinner_001"
+            android:layout_width="0dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:background="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.example.app_005.View.CustomizeTrend
+            android:id="@+id/customizeTrend_0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:src="@android:color/holo_blue_dark"
+            app:layout_constraintBottom_toTopOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="106dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:src="@color/calculator_bg_btn_color"
+            app:layout_constraintBottom_toTopOf="@+id/recyclerView_001"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.example.app_005.View.ColorDuoView
+            android:id="@+id/fre001_color_duo_001"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/customizeTrend_0"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <com.example.app_005.View.OpenLineView
+            android:id="@+id/fra001_opliv_001"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:background="@color/calculator_bg_btn_color"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customizeTrend_0"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView_001"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/spinner_001"
+            app:layout_constraintTop_toTopOf="@+id/spinner_001" />
+
+        <LinearLayout
+            android:id="@+id/fra001_line_001"
+            android:layout_width="42dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/fra001_button_003"
+            app:layout_constraintStart_toStartOf="@+id/fra001_button_003"
+            app:layout_constraintTop_toBottomOf="@+id/fra001_button_003">
+
+            <Button
+                android:id="@+id/fra001_time_01"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:alpha="0.80"
+                android:backgroundTint="@color/colorfrabutton001"
+                android:tag="1"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/fra001_time_02"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:alpha="0.8"
+                android:backgroundTint="@color/colorfrabutton001"
+                android:tag="5"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/fra001_time_03"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:alpha="0.8"
+                android:backgroundTint="@color/colorfrabutton001"
+                android:tag="15"
+                android:text="15" />
+
+            <Button
+                android:id="@+id/fra001_time_04"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:alpha="0.8"
+                android:backgroundTint="@color/colorfrabutton001"
+                android:tag="30"
+                android:text="30" />
+
+            <Button
+                android:id="@+id/fra001_time_05"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:alpha="0.8"
+                android:backgroundTint="@color/colorfrabutton001"
+                android:tag="60"
+                android:text="60" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/fra001_button_003"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="48dp"
+            android:autoSizeMaxTextSize="20dp"
+            android:autoSizeMinTextSize="10dp"
+            android:autoSizeTextType="uniform"
+            android:backgroundTint="@color/colorPrimary"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:includeFontPadding="false"
+            android:text="1"
+            android:textAlignment="gravity"
+            android:textAllCaps="true"
+            android:textColor="@android:color/background_light"
+            android:textDirection="anyRtl"
+            android:textIsSelectable="false"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/fra001_button_002"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:padding="7dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_alarm_add_white_36dp"
+            app:layout_constraintEnd_toStartOf="@+id/fra001_button_003"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/fra001_button_001"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#001D75"
+            android:padding="6dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/baseline_control_camera_white_36"
+            app:layout_constraintEnd_toStartOf="@+id/fra001_button_002"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+</FrameLayout>

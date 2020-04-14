@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingVertical="5dp">
+
+        <ImageView
+            android:id="@+id/image_ril_0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/winTrendView_0"
+            android:layout_alignBottom="@+id/winTrendView_0"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentRight="false"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/window_trend_background"
+            android:visibility="visible" />
+
+        <com.example.app_005.View.WinTrendView
+            android:id="@+id/winTrendView_0"
+            android:layout_width="130dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@color/calculator_bg_btn_color" />
+
+        <TextView
+            android:id="@+id/textView_one_win_04"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/textView_one_win_01"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="买=133.133"
+            android:textSize="8sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView_one_win_01"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/winTrendView_0"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="大=133.133"
+            android:textSize="8sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView_one_win_05"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            android:layout_alignBottom="@+id/image_ril_0"
+            android:layout_marginStart="13dp"
+            android:layout_marginBottom="32dp"
+            android:layout_toEndOf="@+id/textView_one_win_02"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="卖=133.133"
+            android:textSize="8sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView_one_win_02"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            android:layout_alignBottom="@+id/image_ril_0"
+            android:layout_marginStart="6dp"
+            android:layout_marginBottom="32dp"
+            android:layout_toEndOf="@+id/winTrendView_0"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="小=133.133"
+            android:textSize="8sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView_one_win_03"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            android:layout_alignBottom="@+id/image_ril_0"
+            android:layout_marginStart="6dp"
+            android:layout_marginBottom="8dp"
+            android:layout_toEndOf="@+id/winTrendView_0"
+            android:autoSizeMaxTextSize="8dp"
+            android:autoSizeMinTextSize="2dp"
+            android:autoSizeStepGranularity="1sp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="上次=133"
+            android:textSize="8sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView_one_win_06"
+            android:layout_width="50dp"
+            android:layout_height="15dp"
+            android:layout_alignBottom="@+id/image_ril_0"
+            android:layout_marginStart="13dp"
+            android:layout_marginBottom="8dp"
+            android:layout_toEndOf="@+id/textView_one_win_03"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="点差=13"
+            android:textSize="8sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>

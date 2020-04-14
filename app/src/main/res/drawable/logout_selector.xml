@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_activated="true">
+        <shape android:shape="rectangle" >
+    <!-- 填充的颜色 -->
+    <solid android:color="@color/logout_colors_T"></solid>
+    <!-- 设置按钮的四个角为弧形 -->
+    <!-- android:radius 弧形的半径 -->
+    <corners android:radius="40dip" />
+    <!-- padding：Button里面的文字与Button边界的间隔 -->
+    <padding android:bottom="2dp" android:left="2dp" android:right="2dp" android:top="2dp" />
+            <!--<size android:height="49dp" android:width="49dp"></size>-->
+    </shape>
+    </item>
+
+
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle" >
+            <!-- 填充的颜色 -->
+
+            <solid android:color="@color/logout_colors_F">
+
+            </solid>
+            <!-- 设置按钮的四个角为弧形 -->
+            <!-- android:radius 弧形的半径 -->
+            <corners android:radius="40dip" />
+            <!-- stroke 设置边框显示 -->
+            <stroke
+                android:dashGap="0dp"
+                android:width="1dp"
+                android:color="@color/calculator_bg_btn_color" />
+            <!-- padding：Button里面的文字与Button边界的间隔 -->
+            <padding android:bottom="2dp" android:left="2dp" android:right="2dp" android:top="2dp" />
+        </shape>
+    </item>
+    <item android:state_activated="false">
+        <shape android:shape="rectangle" >
+            <!-- 填充的颜色 -->
+            <solid android:color="@color/logout_colors_N"></solid>
+            <!-- 设置按钮的四个角为弧形 -->
+            <!-- android:radius 弧形的半径 -->
+            <corners android:radius="40dip" />
+            <!-- padding：Button里面的文字与Button边界的间隔 -->
+            <padding android:bottom="2dp" android:left="2dp" android:right="2dp" android:top="2dp" />
+            <!--<size android:height="40dp" android:width="40dp"></size>-->
+        </shape>
+    </item>
+</selector>

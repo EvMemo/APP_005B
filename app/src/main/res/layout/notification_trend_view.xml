@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cell_view"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:layout_gravity="center_horizontal"
+    android:orientation="horizontal">
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.2" />
+
+    <Button
+        android:id="@+id/button_notevi_01"
+        android:layout_width="2dp"
+        android:layout_height="64dp"
+        android:layout_weight="0.2"
+        android:background="@color/TTT"
+        android:text="0" />
+
+    <ImageView
+        android:id="@+id/image_notevi_02"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/button_circle_shape" />
+
+    <ImageView
+        android:id="@+id/image_notevi_03"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/button_circle_shape" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.2"
+        android:text="0" />
+
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#66CDC2</color>
+    <color name="colorPrimaryDark">#A7E0DFDF</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="calculator_bg_btn_color">#F0F0F0</color>
+    <color name="fuct_color">#D6D6D6</color>
+    <color name="buttonSelect">#706E6E</color>
+    <color name="buttonNoSelect">#1BFFFFFF</color>
+    <color name="colorButtonNormal">#FF4081</color><!--正常状态下的颜色  -->
+    <color name="colorControlHighlight">#22000000</color><!--覆盖色，按下的颜色  -->
+    <color name="newsTextSeenT">#333333</color>
+    <color name="newsTextSeenF">#8A8A8A</color>
+    <color name="TTT">#69636363</color>
+    <color name="logout_colors_T">#CECECE</color>
+    <color name="logout_colors_F">#C4C3C3</color>
+    <color name="logout_colors_N">#83F7F7F7</color>
+    <color name="logout_text_colors_T">#2C2C2C</color>
+    <color name="logout_text_colors_F">#7C7C7C</color>
+    <color name="colorfrabutton001">#9DE7DF</color>
+    <color name="fra001_line_colorB">#6DDDF6</color>
+    <color name="fra001_line_colorR">#FD476C</color>
+</resources>
