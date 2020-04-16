@@ -40,6 +40,7 @@ Address            Frame              Logical Addr              Module
 0x0000000000487932 0x000000000019f66c 0x0001:0x0000000000086932 C:\Users\user\Documents\XiaoBai\Work\Tools\gdisk32\gdisk32.exe
 End Call Stack
 1
+2
 
 
 
