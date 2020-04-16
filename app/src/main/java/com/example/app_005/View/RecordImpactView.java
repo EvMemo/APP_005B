@@ -61,6 +61,7 @@ public class RecordImpactView extends View {
     Paint paintUIC;
     Paint paintUID;
     Paint paintUIE;
+    Paint paintUIH;
     Paint paintButA;
     Paint paintTextA;
     Paint paintTextB;
@@ -118,6 +119,7 @@ public class RecordImpactView extends View {
 
         paintTextC = new Paint();
         paintTextC.setAntiAlias(true);//消除锯齿
+        paintTextC.setStyle(Paint.Style.FILL);
         paintTextC.setColor(Color.parseColor("#444f51"));
         paintTextC.setTextAlign(Paint.Align.LEFT);
         paintTextC.setTextSize(22);
@@ -127,6 +129,10 @@ public class RecordImpactView extends View {
         paintTextD.setColor(Color.BLACK);
         paintTextD.setTextAlign(Paint.Align.CENTER);
         paintTextD.setTextSize(34);
+
+
+        paintUIH = new Paint();
+        paintUIH.setColor(Color.parseColor("#f8fbfb"));
 
     }
 
@@ -169,6 +175,23 @@ public class RecordImpactView extends View {
             boolDraw = true;
             invalidate();
         }
+    }
+    void addSkillView() {
+        if (!boolAdd) {
+            boolAdd = true;
+            recoDrawDips.openAddRecoFinView(true);
+        }
+    }
+
+    void openTextRecordView(boolean bool_A) {
+        if (recordNewsTextSyster != null) {
+            recordNewsTextSyster.openTextRecordView();
+        }
+
+    }
+    public void closeDrawView(){
+        boolDraw=false;
+        boolAdd=false;
     }
 
     void drawImpData(Canvas canvas_A, float float_W, float float_H, String string_A, int int_A, String[] strings_A) {
@@ -318,19 +341,7 @@ public class RecordImpactView extends View {
         this.setLayoutParams(layoutParams_A);
     }
 
-    void addSkillView() {
-        if (!boolAdd) {
-            boolAdd = true;
-            recoDrawDips.openAddRecoFinView(true);
-        }
-    }
 
-    void openTextRecordView(boolean bool_A) {
-        if (recordNewsTextSyster != null) {
-            recordNewsTextSyster.openTextRecordView();
-        }
-
-    }
 
     void onTouch(float float_W, float float_H) {
         if (float_W > (width - 105) && float_W < (width - 15)) {
@@ -392,9 +403,11 @@ public class RecordImpactView extends View {
         float floatViewH;
         float floatDataH;
         float floatDataH2;
+        float floatDataH3;
         DrawData[] drawData;
         float[] floatViewCat;
         DrawBanji drawBanji;
+
 
         public RecoDrawDips() {
             boolDips = true;
@@ -544,6 +557,7 @@ public class RecordImpactView extends View {
                     {
                         Log.w(this.toString(), "RecoFin.onDraw: E0"+"="+floatDataH );
                         drawBanji.onDraw(canvas_A, float_W, float_H+floatDataH);
+
                     }
                 //drawB.onDraw(canvas_A,float_W,float_H+floatDataH);
             } else {
@@ -599,13 +613,16 @@ public class RecordImpactView extends View {
             public String stringNameB;
             public SkillFinacTool.SkillFinacName[] skillFinacNamesB;
             DrawData drawData;
+            DrawBanjiSel drawBanjiSel;
             float floatDataH;
-
+            float floatDataH2;
+            float floatDataH3;
             public float[] floatsA, floatsB, floatsC;
             public boolean boolDraw;
 
             public DrawBanji() {
                 boolDraw=false;
+                drawBanjiSel=new DrawBanjiSel();
             }
 
 //            public DrawBanji(DrawData drawData_A) {
@@ -649,11 +666,18 @@ public class RecordImpactView extends View {
                         stringNameB = stringBuilder_A.toString();
 
                     }
-                    floatDataH=ccData();
 
                 }
+                drawBanjiSel.setDrawData(drawData);
+                floatDataH=ccData()+10;
+                floatDataH2=drawBanjiSel.ccData();
+                if(true)
+                    {
+                        floatDataH3=50;
+
+                    }
                 boolDraw=true;
-                return floatDataH;
+                return floatDataH+floatDataH2+floatDataH3;
             }
             public float ccData() {
                 float float_Vh = 0;
@@ -738,7 +762,7 @@ public class RecordImpactView extends View {
             }
 
             public void onDraw(Canvas canvas_A, float float_W, float float_H) {
-                canvas_A.drawRoundRect(float_W+10,float_H,width-10,float_H+floatDataH2,15,15,paintUID);
+                canvas_A.drawRoundRect(float_W+10,float_H,width-10,float_H+floatDataH2+floatDataH-10,15,15,paintUID);
                 canvas_A.drawText(stringMode, float_W + 20, float_H + paintTextC.getTextSize() + 16, paintTextC);
                 canvas_A.drawRoundRect(float_W+floatsA[0], float_H+floatsA[1], float_W +floatsA[2], float_H+floatsA[3], 10, 10, paintUIB);
                 canvas_A.drawRoundRect(float_W+floatsB[0], float_H+floatsB[1], float_W +floatsB[2], float_H+floatsB[3], 10, 10, paintUIB);
@@ -746,6 +770,12 @@ public class RecordImpactView extends View {
                 canvas_A.drawText((stringName == null ? "" : stringName), float_W+floatsA[0] + 10, float_H+floatsA[3] - 8, paintTextB);
                 canvas_A.drawText((stringModeEdit == null ? "" : stringModeEdit), float_W+floatsB[0] + 10, float_H+floatsB[3] - 8, paintTextB);
                 canvas_A.drawText((stringNameB == null ? "" : stringNameB), float_W+floatsC[0] + 10, float_H+floatsC[3] - 8, paintTextB);
+                if(drawBanjiSel.boolDraw)
+                    {
+                        drawBanjiSel.onDraw(canvas_A,float_W,float_H+floatDataH);
+
+                    }
+
 
             }
             public  String getModeString(int int_A){
@@ -764,6 +794,102 @@ public class RecordImpactView extends View {
                 return "";
             }
             class DrawBanjiSel{
+                public boolean boolDraw;
+                public int intMode;
+                public float floatDataView;
+                public DrawBjSelData[] drawBjSelData;
+                public DrawData drawData;
+                float[] floatSelCat;
+                public DrawBanjiSel(){
+                    drawBjSelData=new DrawBjSelData[SkillFinacTool.St_FinacNames.length];
+                    for(int i=0;i<SkillFinacTool.St_FinacNames.length;i++)
+                        {
+                            drawBjSelData[i]=new DrawBjSelData(SkillFinacTool.St_FinacNames[i]);
+                            //Log.w(this.toString(), "DrawBanjiSel: F0"+"="+ );
+                        }
+                    Log.w(this.toString(), "DrawBanjiSel: I0"+"="+drawBjSelData.length );
+                }
+                public void setDrawData(DrawData drawData_A){
+                    drawData=drawData_A;
+                }
+                public void setIntMode(int intMode_A){
+                    intMode=intMode_A;
+                }
+                public void ccDataBoolL(){
+
+
+                }
+                public float ccData(){
+                    floatSelCat=new float[4];
+                    floatSelCat[0]=30;
+                    floatSelCat[1]=20;
+                    floatSelCat[2]=1080-70;
+                    floatSelCat[3]=30+paintTextB.getTextSize();
+                    float float_A=0;
+                    //Log.w(this.toString(), "DrawBanjiSel.ccData: E0"+"="+intMode +"="+ drawBjSelData.length);
+                    if(true||intMode==0)
+                    {
+                        for(int i=0;i<drawBjSelData.length;i++)
+                        {
+                            float_A=paintTextB.measureText(drawBjSelData[i].stringName);
+                            if((float_A+20+30+40)>(floatSelCat[2]-floatSelCat[0]))
+                            {
+                                floatSelCat[0]=30;
+                                floatSelCat[1]=floatSelCat[3]+15;
+                                floatSelCat[2]=1080-70;
+                                floatSelCat[3]+=25+paintTextB.getTextSize();
+                            }
+
+                            drawBjSelData[i].setFloatP(new float[]{floatSelCat[0]+20,floatSelCat[1],floatSelCat[0]+float_A+50+40,floatSelCat[3]});
+                            //Log.w(this.toString(), "DrawBanjiSel.ccData: E1"+"="+floatSelCat[0]+10 +"="+floatSelCat[1] +"="+floatSelCat[0]+float_A+30 +"="+floatSelCat[3]);
+                            floatSelCat[0]+=float_A+50+40;
+                            // floatSelCat[1]=floatSelCat[3]+8;
+                            // floatSelCat[2]=1080-20;
+                            // floatSelCat[3]=8+paintTextB.getTextSize();
+                        }
+
+
+                    }else {
+
+                    }
+                    boolDraw=true;
+                    floatDataView=floatSelCat[3]+10;
+                    return floatDataView;
+
+                }
+                public void onDraw(Canvas canvas_A, float float_W, float float_H){
+                    canvas_A.drawRoundRect(float_W+20,float_H+10,width-20,float_H+floatDataH2,15,15,paintUIH);
+                    canvas_A.drawLine(30,50,1080-70,50,paintTextA);
+                    for(int i=0;i<drawBjSelData.length;i++)
+                        {
+                            drawBjSelData[i].onDraw(canvas_A,float_W,float_H,paintUIC);
+                        }
+
+                }
+
+
+                class DrawBjSelData{
+                    public SkillFinacTool.SkillFinacName skillFinacName;
+                    public String stringName;
+                    public float[] floatP;
+                    public boolean boolL;
+                    public DrawBjSelData(SkillFinacTool.SkillFinacName skillFinacName_A){
+                        skillFinacName=skillFinacName_A;
+                        stringName=skillFinacName.stringName;
+                       // Log.w(this.toString(), "DrawBjSelData: E0"+"="+ stringName);
+                    }
+                    public void onDraw(Canvas canvas_A,float float_W,float float_H,Paint paint_A){
+                        canvas_A.drawRoundRect(float_W+floatP[0],float_H+floatP[1],float_W+floatP[2],float_H+floatP[3],10,10,paint_A);
+                        canvas_A.drawText(stringName,float_W+floatP[0]+10, float_H+floatP[3]-10,paintTextB);
+                    }
+                    void setFloatP(float[] floatP_A){
+                        floatP=floatP_A;
+                    }
+                    void setBoolL(boolean boolL_A){
+                        boolL=boolL_A;
+                    }
+
+                }
 
             }
 
