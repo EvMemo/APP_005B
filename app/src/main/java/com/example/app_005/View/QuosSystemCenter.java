@@ -1570,12 +1570,13 @@ public class QuosSystemCenter{
                                         floats_A[i]=floats_C[i];
                                     }
                                 }
+                            Log.w(this.toString(), "getLineData: G0"+"="+int_NN +"="+int_TT +"="+int_Mom);
                             floats_C=quoDDataB.getLineDataB(int_NN-int_TT,int_Mom);
                             if(floats_C!=null)
                             {
                                 for(int i=0;i<floats_C.length;i++)
                                 {
-                                    floats_A[i+(int_TT+1)]=floats_C[i];
+                                    floats_A[i+(int_TT)]=floats_C[i];
                                 }
                             }
 
@@ -1632,7 +1633,7 @@ public class QuosSystemCenter{
                             {
                                 for(int i=0;i<floats_C.length;i++)
                                 {
-                                    floats_A[i+(int_TT+1)]=floats_C[i];
+                                    floats_A[i+(int_TT)]=floats_C[i];
                                 }
                             }
                         }
