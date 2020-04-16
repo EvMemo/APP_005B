@@ -4,7 +4,8 @@ Error generated at 08/09/2019 22:36:59
 
 Failed to open \\.\E:
 Win32 error: (0x00000002)
-The system cannot find the file specified.
+The system cannot find the file specified.
+
 
 
 Generated at ..\Win32File.cpp:148
@@ -38,5 +39,7 @@ Address            Frame              Logical Addr              Module
 0x0000000000487587 0x000000000019f424 0x0001:0x0000000000086587 C:\Users\user\Documents\XiaoBai\Work\Tools\gdisk32\gdisk32.exe
 0x0000000000487932 0x000000000019f66c 0x0001:0x0000000000086932 C:\Users\user\Documents\XiaoBai\Work\Tools\gdisk32\gdisk32.exe
 End Call Stack
+1
+1
 
 
