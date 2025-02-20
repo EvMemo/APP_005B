@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        public void onServiceDisconnected(ComponentName name) {
+        public void onServiceDisconnecte''d(ComponentName name) {
         }
     };//外汇数据服务连接器
     @Override
@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-
+        //20
         if(false)
             {
                 Button btn = new Button(this);
